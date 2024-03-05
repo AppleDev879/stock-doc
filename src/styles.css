@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+/* Dark Theme Styles */
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-theme th,
+.dark-theme td {
+  border: 1px solid #ffffff;
+}

@@ -1,0 +1,54 @@
+<table *ngIf="result;">
+    <thead>
+        <tr>
+            <th>Strategy</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Symbol</td>
+            <td>{{ result.symbol }}</td>
+        </tr>
+        <tr>
+            <td>Capital</td>
+            <td>{{ result.capital }}</td>
+        </tr>
+        <tr>
+            <td>Strategy</td>
+            <td>{{ result.strategy }}</td>
+        </tr>
+        <tr>
+            <td>Total P/L</td>
+            <td>{{ result.pl }}</td>
+        </tr>
+        <tr>
+            <td>Total P/L %</td>
+            <td>{{ result.pl_pct }}</td>
+        </tr>
+        <tr>
+            <td>Total Wins</td>
+            <td>{{ result.total_wins }}</td>
+        </tr>
+        <tr>
+            <td>Total Losses</td>
+            <td>{{ result.total_losses }}</td>
+        </tr>
+        <tr>
+            <td>Win Rate</td>
+            <td>{{ result.win_rate_pct }}</td>
+        </tr>
+        <tr>
+            <td>Avg. Win %</td>
+            <td>{{ result.avg_win_pct }}</td>
+        </tr>
+        <tr>
+            <td>Avg. Loss %</td>
+            <td>{{ result.avg_loss_pct }}</td>
+        </tr>
+        <tr>
+            <td>Total Trades</td>
+            <td>{{ result.total_trades }}</td>
+        </tr>
+    </tbody>
+</table>
