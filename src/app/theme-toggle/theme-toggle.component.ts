@@ -22,6 +22,7 @@ export class ThemeToggleComponent {
     this.isDarkMode = !this.isDarkMode;
     this.themeService.setDarkMode(this.isDarkMode);
 
+    const lightAxesColor = '#686868';
     const lightColor = '#E5E5E5';
     const darkColor = 'white';
 
@@ -36,8 +37,8 @@ export class ThemeToggleComponent {
       } else {
         chart.options.scales!['x']!.grid!.color = lightColor;
         chart.options.scales!['y']!.grid!.color = lightColor;
-        chart.options.scales!['x']!.ticks!.color! = lightColor;
-        chart.options.scales!['y']!.ticks!.color! = lightColor;
+        chart.options.scales!['x']!.ticks!.color! = lightAxesColor;
+        chart.options.scales!['y']!.ticks!.color! = lightAxesColor;
       }
 
       // Update the chart to apply the new options
