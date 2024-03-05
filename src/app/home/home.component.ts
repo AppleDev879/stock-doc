@@ -9,6 +9,7 @@ import { DetailsComponent } from '../details/details.component';
 import { StrategyResult } from '../service/strategy-results';
 import { BuyHoldService } from '../service/buy-hold.service';
 import { CommonModule } from '@angular/common';
+import { ExplanationComponent } from '../explanation/explanation.component';
 
 @Component({
   selector: 'app-home',
@@ -41,6 +42,7 @@ import { CommonModule } from '@angular/common';
             [result]="result"
           ></app-details>
         </div>
+        <app-explanation></app-explanation>
       </div>
     </main>
   </div>`,
@@ -51,6 +53,7 @@ import { CommonModule } from '@angular/common';
     ThemeToggleComponent,
     DetailsComponent,
     CommonModule,
+    ExplanationComponent,
   ],
 })
 export class HomeComponent {
