@@ -15,37 +15,38 @@ import { ExplanationComponent } from '../explanation/explanation.component';
   selector: 'app-home',
   standalone: true,
   template: ` <div id="container">
-    <header>
-      <app-theme-toggle></app-theme-toggle>
+      <header>
+        <app-theme-toggle></app-theme-toggle>
 
-      <form>
-        <input type="text" placeholder="Type to search..." #symbol />
-        <input
-          type="submit"
-          value="Search"
-          (click)="updateChart(symbol.value)"
-        />
-      </form>
-      <h1>{{ chartedSymbol }}</h1>
-    </header>
-    <main>
-      <div id="homeContainer">
-        <div id="chartContainer">
-          <app-chart
-            [apiError]="apiError"
-            [chartables]="chartables"
-          ></app-chart>
+        <form>
+          <input type="text" placeholder="Type to search..." #symbol />
+          <input
+            type="submit"
+            value="Search"
+            (click)="updateChart(symbol.value)"
+          />
+        </form>
+        <h1>{{ chartedSymbol }}</h1>
+      </header>
+      <main>
+        <div id="homeContainer">
+          <div id="chartContainer">
+            <app-chart
+              [apiError]="apiError"
+              [chartables]="chartables"
+            ></app-chart>
+          </div>
+          <div class="details">
+            <app-details
+              *ngFor="let result of results"
+              [result]="result"
+            ></app-details>
+            <app-explanation></app-explanation>
+          </div>
         </div>
-        <div class="details">
-          <app-details
-            *ngFor="let result of results"
-            [result]="result"
-          ></app-details>
-        </div>
-        <app-explanation></app-explanation>
-      </div>
-    </main>
-  </div>`,
+      </main>
+    </div>
+    <footer></footer>`,
   styleUrl: './home.component.css',
   imports: [
     ChartComponent,
